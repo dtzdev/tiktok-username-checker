@@ -14,6 +14,11 @@ namespace UsernameChecker
 
         public static void Check()
         {
+            if (Directory.Exists("./usernames")) { }
+            else
+            {
+                Directory.CreateDirectory("./usernames");
+            }
             if (File.Exists("./usernames/tiktok.txt")) { }
             else
             {
