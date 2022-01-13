@@ -2,17 +2,16 @@ using System.Net;
 
 namespace UsernameChecker
 {
-    class TikTok
+    class Program
     {
         public enum HttpStatusCode
         {
             Moved = 301,
             OK = 200,
         }
-        // shared randomization thingy
         public static Random random = new Random();
 
-        public static void Check()
+        public static void Main()
         {
             if (Directory.Exists("./usernames")) { }
             else
@@ -65,7 +64,7 @@ namespace UsernameChecker
                             Console.Write("https://www.tiktok.com/@" + s + "\n");
                             string text = s;
                             Console.ForegroundColor = ConsoleColor.White;
-                            using (StreamWriter writer = new StreamWriter("tiktok_hits.txt", true)) //// true to append data to the file
+                            using (StreamWriter writer = new StreamWriter("tiktok_hits.txt", true))
                             {
                                 writer.WriteLine(s);
                             }
@@ -80,7 +79,7 @@ namespace UsernameChecker
                         string text = s;
                         Console.ForegroundColor = ConsoleColor.White;
                         File.WriteAllText("./usernames/tiktok_hits.txt", text);
-                        using (StreamWriter writer = new StreamWriter("tiktok_hits.txt", true)) //// true to append data to the file
+                        using (StreamWriter writer = new StreamWriter("tiktok_hits.txt", true))
                         {
                             writer.WriteLine(s);
                         }
