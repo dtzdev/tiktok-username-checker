@@ -9,7 +9,7 @@ Note: It has lot of things that could have been done better. If you want to fix/
 
 ----------------------------------------------------
 ### How To Generate Name Combos?
-I personally used [this site]()
+I personally used [this site](https://www.random.org/strings/)
 
 ----------------------------------------------------
 ### Credits
