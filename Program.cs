@@ -9,7 +9,6 @@ namespace UsernameChecker
             Moved = 301,
             OK = 200,
         }
-        public HttpWebResponse GetSafeResponse(HttpWebRequest request) { try { return (HttpWebResponse)request.GetResponse(); } catch (WebException we) { return (HttpWebResponse)we.Response; } }
         // shared randomization thingy
         public static Random random = new Random();
 
@@ -61,7 +60,7 @@ namespace UsernameChecker
                             Console.Write("https://www.tiktok.com/@" + s + "\n");
                             string text = s;
                             Console.ForegroundColor = ConsoleColor.White;
-                            using (StreamWriter writer = new StreamWriter("email.txt", true)) //// true to append data to the file
+                            using (StreamWriter writer = new StreamWriter("tiktok_hits.txt", true)) //// true to append data to the file
                             {
                                 writer.WriteLine(s);
                             }
@@ -76,7 +75,7 @@ namespace UsernameChecker
                         string text = s;
                         Console.ForegroundColor = ConsoleColor.White;
                         File.WriteAllText("./usernames/tiktok_hits.txt", text);
-                        using (StreamWriter writer = new StreamWriter("email.txt", true)) //// true to append data to the file
+                        using (StreamWriter writer = new StreamWriter("tiktok_hits.txt", true)) //// true to append data to the file
                         {
                             writer.WriteLine(s);
                         }
